@@ -1,0 +1,59 @@
+<header>
+  <nav class="navbar">
+    <h1>How to use our app?</h1>
+  </nav>
+</header>
+<%= stylesheet_link_tag "about", "data-turbo-track": "reload" %>
+
+<div class="page-section">
+    <div class="container">
+      <div class="row text-center align-items-center">
+        <div class="col-lg-4 py-3">
+          <div class="display-4 text-center text-primary"><span class="mai-pin"></span></div>
+          <div class="boxforpic"><div class="setting"></div></div>
+          <p class="mb-3 font-weight-medium text-lg">User Profile</p>
+          <p class="mb-0">For new users, click <%= link_to "here", sign_up_path, class:"nodeco"%> to sign up! 
+          Existing users can click <%= link_to "here", sign_in_path, class:"nodeco"%> to sign in!</p>
+        </div>
+        <div class="col-lg-4 py-3">
+          <div class="display-4 text-center text-primary"><span class="mai-call"></span></div>
+          <div class="boxforpic"><div class="calendar"></div></div>
+          <p class="mb-3 font-weight-medium text-lg">Calendar</p>
+          <p class="mb-0">The calendar page will display your calendar. You can click on the "add event" button to create new events.</p>
+          <p class="mb-0">You can also click into your events to edit / delete / add reminders to them.</p>
+        </div>  
+        <div class="col-lg-4 py-3">
+          <div class="display-4 text-center text-primary"><span class="mai-mail"></span></div>
+          <div class="boxforpic"><div class="todolist"></div></div>
+          <p class="mb-3 font-weight-medium text-lg">To-do List</p>
+          <p class="mb-0">The to-do list page will allow you to create / edit / delete tasks that you set for yourself and display them.</p>
+          <p class="mb-0"></p>
+        </div>
+      </div>
+    </div>
+<div class="page-section">
+    <div class="container">
+      <div class="row text-center align-items-center">
+        <div class="col-lg-4 py-3">
+          <div class="display-4 text-center text-primary"><span class="mai-pin"></span></div>
+          <div class="boxforpic"><div class="timer"></div></div>
+          <p class="mb-3 font-weight-medium text-lg">Timer</p>
+          <p class="mb-0">The timer page allows you to set a time for countdowning to. 
+          You can set it for study, break, or any other purposes. </p>
+          <p class="mb-0">You can also set the time to zero and click on start button to start the stopwatch.</p>
+          <p class="mb-0">After completing a task, you can make a record of the amount of time you spent.</p>
+        </div>
+        <div class="col-lg-4 py-3">
+          <div class="display-4 text-center text-primary"><span class="mai-call"></span></div>
+          <div class="boxforpic"><div class="goal"></div></div>
+          <p class="mb-3 font-weight-medium text-lg">Goals</p>
+          <p class="mb-0">The goals page will allow you to create / edit / delete goals and rewards that you set for yourself and display them</p>
+        </div>  
+        <div class="col-lg-4 py-3">
+          <div class="display-4 text-center text-primary"><span class="mai-mail"></span></div>
+          <div class="boxforpic"><div class="report"></div></div>
+          <p class="mb-3 font-weight-medium text-lg">Weekly Report</p>
+          <p class="mb-0">The weekly reports page will display all the tabulated data recorded from the timers page.</p>
+        </div>
+      </div>
+    </div>

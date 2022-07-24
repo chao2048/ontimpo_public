@@ -1,0 +1,29 @@
+<div class="container">
+<%= form_with(model: motivation) do |form| %>
+  <% if motivation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(motivation.errors.count, "error") %> prohibited this motivation from being saved:</h2>
+
+      <ul>
+        <% motivation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :goal, style: "display: block" %>
+    <%= form.text_area :goal %>
+  </div>
+<br>
+  <div>
+    <%= form.label :reward, style: "display: block" %>
+    <%= form.text_area :reward %>
+  </div>
+<br>
+  <div>
+    <%= form.submit "Create", class: "btn btn-primary", data: {turbo: false} %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="application.css">
+
+<body>
+    <div class="logo">
+    </div>
+    <div class="slogan">
+        <h2>WELCOME!</h2>
+        <br>
+        <h3>
+        Worried about missing you deadline?<br>
+        Worry No More!<br>
+        Try out this personal Time Management<br>
+        App now!
+        </h3>
+    </div>
+     <div class="loginbox">
+        <h1>Forgot your password?</h1>
+        <%= form_with url: password_reset_path do |form| %>
+            <div class="mb-3">
+                <%= form.label :email %>
+                <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+            </div>
+            <div class="mb-3">
+                <%= form.submit "Reset Password", class: "btn btn-primary", data: {turbo: false} %>
+            </div>
+        <% end %>
+    </div>
+</body>
