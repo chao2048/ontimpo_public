@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+<link rel="stylesheet" type="text/css" media="print" href="todo.css">
+
+<header>
+  <nav class="navbar">
+  <h1>To-do List</h1>
+  </nav>
+</header>
+<div class="someClass noPrint">
+<a class="btn btn-secondary" href="todos/new" role="button">Add todo</a>
+</div>
+<br>
+<div id="todos">
+  <% @todos.each do |todo| %>
+    <%= render todo %>
+    <div class="someClass noPrint">
+    <%= link_to "Edit", edit_todo_path(todo) %> | 
+    <%= button_to "Complete", todo, method: :delete %>
+    </div>
+    <br>
+  <% end %>
+</div>
+<br>
+<div class="someClass noPrint">
+<button onclick="window.print();">Download Todo-list</button>
+</div>
+

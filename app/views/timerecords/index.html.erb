@@ -1,0 +1,21 @@
+<header>
+  <nav class="navbar">
+    <h1>Record Your Time Spent</h1>
+  </nav>
+</header>
+<br>
+<div>
+    <%= form_with model: [ Current.user, Current.user.timerecords.build ] do |form| %>
+        <h4><p>
+        <%= form.label :time_type %><br>
+        <%= form.text_field :timetype, class: "form-control", placeholder: "study, game, lecture, etc." %>
+        </p></h4>
+        <h4><p>
+        <%= form.label :time_spent_in_minutes %><br>
+        <%= form.number_field :period, in: 1.0..1000.0, step: 1 %>
+        </p></h4>
+        <p>
+        <%= form.submit "Record time", class: "btn btn-primary", data: {turbo: false} %>
+        </p>
+  <% end %>
+</div>

@@ -1,0 +1,21 @@
+<!--p>
+    <%= todo_list.content %>
+    <%= button_to 'Delete', [todo_list.event, todo_list], method: :delete, :onclick => "return confirm('Are you sure?')" %>
+    <%= button_to 'Complete', [todo_list.event, todo_list], method: :patch, :onclick => "return confirm('Are you sure?')" %>
+</p-->
+
+<div class="row clearfix">
+    <% if todo_list.completed_at? %>
+        <div class="complete_todo_list">
+            <p style="opacity: 0.4;"><strike><%= todo_list.content %></strike> was completed</p>
+        </div>
+    <% else %>
+        <div class="not_complete_todo_list">
+            <p>  
+                    <%= button_to 'Completed', [todo_list.event, todo_list], method: :patch, :onclick => "return confirm('Are you sure?')", class:"com" %>
+                    <%= button_to 'Delete', [todo_list.event, todo_list], method: :delete, :onclick => "return confirm('Are you sure?')", class:"del" %>
+                     <%= todo_list.content %> 
+            </p>
+        </div>
+    <% end %>
+</div>

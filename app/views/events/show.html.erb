@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @event %>
+<br>
+<div id="todo_lists_wrapper">
+ <p>
+ <strong>Reminders: </strong>
+ </p>
+ <%= render @event.todo_lists %>
+ <br>
+  <div id="form">
+    <%= render "todo_lists/form" %>
+  </div>
+</div>
+<br>
+<div>
+  <%= link_to "Edit this event", edit_event_path(@event) %> |
+  <%= link_to "Back to Calendar", timetable_path %>
+<br><br>
+  <%= button_to "Delete this event", @event, method: :delete %>
+</div>
+<br>
