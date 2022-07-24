@@ -1,0 +1,2 @@
+module WreportsHelper
+end
