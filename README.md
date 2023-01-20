@@ -20,7 +20,6 @@ Development tools
 * jquery
 
 Deployed with Heroku,
-app link = https://ontimpo.herokuapp.com
 
 Instructions for using our app can be found in the features page!
 
